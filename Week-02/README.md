@@ -1,12 +1,21 @@
 # Week 02 Solutions
 
 ## 📝 Overview
-This folder contains solutions for Week 02 assignments.
+This folder contains solutions for Week 02 assignments covering Spring Core — Dependency Injection and Bean Configuration.
 
 ## 📂 Files
-| File | Description |
-|------|-------------|
-| *(solutions will be added here)* | *(description)* |
+
+| Exercise | Folder | Description |
+|----------|--------|-------------|
+| 01 | 01)LibraryManagement | Configuring a Basic Spring Application using XML-based bean configuration |
+| 02 | 02)ImplementingDependencyInjection | Implementing Dependency Injection using Spring IoC and setter injection |
+
+## 🔧 Tech Stack
+- Java 17
+- Spring Core 5.3.31
+- Maven
 
 ## 🔍 Notes
-- Add any notes or observations about this week's problems here.
+- XML-based bean configuration using `applicationContext.xml`
+- Setter Injection used to wire `BookRepository` into `BookService`
+- Spring `ClassPathXmlApplicationContext` used to load the application context
