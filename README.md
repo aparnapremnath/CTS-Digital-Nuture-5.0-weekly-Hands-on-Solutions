@@ -1,3 +1,4 @@
+```
 # 📚 Weekly Solutions
 
 This repository contains my week-wise organized solutions submitted as part of the program.
@@ -12,8 +13,7 @@ solutions/
 ├── Week-04/
 ├── Week-05/
 ├── Week-06/
-├── Week-07/
-└── Week-08/
+└── Week-07/
 ```
 
 ## 🗂️ How It's Organized
@@ -27,4 +27,5 @@ Each weekly folder contains:
 Solutions are shared with the POC upon request via this public GitHub repository.
 
 ---
-*Last updated: June 2026*
+*Last updated: July 2026*
+```
