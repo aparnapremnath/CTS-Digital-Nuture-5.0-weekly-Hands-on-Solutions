@@ -1,50 +1,37 @@
-# Week 05 – React
+# Week 05 Solutions
 
-Hands-on exercises covering React fundamentals: environment setup, components (class & function), lifecycle methods, styling, JSX, events, and conditional rendering.
+## 📄 Overview
 
-## Exercises
+This folder contains solutions for Week 05 assignments covering React fundamentals — component setup, class and function components, lifecycle methods, styling, JSX, events, and conditional rendering.
 
-### 01) React Setup
-**App:** `myfirstreact`
-Basic Create React App setup. Renders a welcome heading in `App.js`.
+## 📁 Files
 
-### 02) Student App Components
-**App:** `studentapp`
-Class components (`Home`, `About`, `Contact`) composed together inside `App.js`.
+| Exercise | Folder | Description |
+|----------|--------|--------------|
+| 01 | 01)ReactSetup | Basic Create React App setup rendering a welcome heading |
+| 02 | 02)StudentAppComponents | Class components (Home, About, Contact) composed in App.js |
+| 03 | 03)ScoreCalculatorApp | Function component with props and CSS stylesheet styling |
+| 04 | 04)BlogAppLifecycle | Lifecycle methods (componentDidMount, componentDidCatch) fetching JSONPlaceholder API data |
+| 05 | 05)CohortDashboardStyling | CSS Modules with conditional heading colors based on cohort status |
+| 06 | 06)CricketAppES6 | ES6 features - map, arrow-function filter, destructuring, spread operator |
+| 07 | 07)OfficeSpaceRentalAppJSX | JSX fundamentals - elements, attributes, list rendering, conditional inline styling |
+| 08 | 08)EventExamplesApp | Event handling - multi-handler clicks, argument passing, synthetic events, form submission |
+| 09 | 09)TicketBookingAppConditional | Conditional rendering toggling Guest/User views via Login/Logout |
+| 10 | 10)BloggerAppConditionalRendering | Multiple conditional rendering techniques (if/else, ternary, logical AND) across 3 components |
 
-### 03) Score Calculator App
-**App:** `scorecalculatorapp`
-Function component (`CalculateScore`) using props to calculate and display an average score, styled with a CSS stylesheet.
+## 🛠 Tech Stack
 
-### 04) Blog App Lifecycle
-**App:** `blogapp`
-Class component (`Posts`) using `componentDidMount()` to fetch data from the JSONPlaceholder API and `componentDidCatch()` for error handling.
+- React 18
+- JavaScript ES6
+- Create React App
+- CSS / CSS Modules
+- Node.js
+- npm
 
-### 05) Cohort Dashboard Styling
-**App:** `cohorttracker`
-CSS Modules (`CohortDetails.module.css`) applied to a cohort card component, with conditional heading colors based on cohort status.
+## 🔍 Notes
 
-### 06) Cricket App ES6
-**App:** `cricketapp`
-ES6 features across two components — `map()`, arrow-function `filter()`, array destructuring, and the spread operator for merging arrays — toggled via a `flag` variable.
-
-### 07) Office Space Rental App JSX
-**App:** `officespacerentalapp`
-JSX fundamentals — elements, attributes, single-object rendering, list rendering with `map()`, and conditional inline styling based on rent value.
-
-### 08) Event Examples App
-**App:** `eventexamplesapp`
-React event handling — multiple handlers on a single click, passing arguments to handlers, synthetic events, and a `CurrencyConvertor` component using `handleSubmit`.
-
-### 09) Ticket Booking App Conditional
-**App:** `ticketbookingapp`
-Conditional rendering toggling between `Guest` and `User` views based on login state, controlled by Login/Logout buttons.
-
-### 10) Blogger App Conditional Rendering
-**App:** `bloggerapp`
-Multiple conditional rendering techniques (if/else, ternary operator, logical `&&` with element variables) applied across three components: `BookDetails`, `BlogDetails`, `CourseDetails`.
-
----
-
-**Tech stack:** React (Create React App), JavaScript ES6, CSS / CSS Modules
-**Tools:** VS Code, Node.js, npm
+- `create-react-app` project names must be lowercase due to npm naming restrictions
+- CSS Modules (`*.module.css`) used in Exercise 05 for scoped, conflict-free component styling
+- `componentDidMount()` used for API calls on mount; `componentDidCatch()` used for error boundary handling in Exercise 04
+- Spread operator (`...`) used to merge arrays without mutating originals in Exercise 06
+- Conditional rendering demonstrated via if/else, ternary operator, and logical `&&` across Exercises 09 and 10
