@@ -1,0 +1,26 @@
+Exercise 5: Clean Up and Push Back to Remote - Commands Reference
+======================================================================
+
+Step 1: Verify master is clean
+----------------------------------
+cd C:\Users\DELL\Downloads\GitDemo
+git checkout master
+git status
+Remove-Item conflict_diff.txt    (cleanup leftover file from Ex4)
+git status
+
+Step 2: List all available branches
+-----------------------------------------
+git branch -a
+
+Step 3: Pull the remote repository
+----------------------------------------
+git pull origin master
+
+Step 4: Push any pending changes
+--------------------------------------
+git push
+
+Step 5: Verify changes are reflected on GitHub
+----------------------------------------------------
+(Checked https://github.com/aparnapremnath/GitDemo directly in browser)

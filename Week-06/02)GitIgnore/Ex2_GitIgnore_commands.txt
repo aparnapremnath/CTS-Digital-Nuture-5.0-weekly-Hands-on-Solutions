@@ -1,0 +1,29 @@
+Exercise 2: .gitignore - Commands Reference
+==============================================
+
+Step 1: Create files to be ignored
+-------------------------------------
+cd C:\Users\DELL\Downloads\GitDemo
+"Sample log entry" | Out-File error.log
+mkdir log
+"Sample log entry" | Out-File log\debug.log
+git status                    (shows error.log and log/ as untracked)
+
+Step 2: Create .gitignore
+----------------------------
+notepad .gitignore
+
+Content added:
+*.log
+log/
+
+Step 3: Confirm files are now ignored
+-----------------------------------------
+git status                    (only .gitignore shows as untracked)
+
+Step 4: Commit and push
+---------------------------
+git add .gitignore
+git commit -m "Add .gitignore to exclude log files and folder"
+git status
+git push --set-upstream origin master

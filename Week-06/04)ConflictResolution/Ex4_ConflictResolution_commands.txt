@@ -1,0 +1,104 @@
+Exercise 4: Merge Conflict Resolution - Commands Reference
+===============================================================
+
+Step 1: Verify master is clean
+----------------------------------
+cd C:\Users\DELL\Downloads\GitDemo
+git checkout master
+git status
+Remove-Item branch_diff.txt      (cleanup leftover file from Ex3)
+git status
+
+Step 2: Create branch "GitWork" and add hello.xml
+-------------------------------------------------------
+git branch GitWork
+git checkout GitWork
+'<message>Hello from GitWork branch</message>' | Out-File hello.xml
+cat hello.xml
+
+Step 3: Update content
+---------------------------
+'<message>Hello from GitWork branch - updated content</message>' | Out-File hello.xml
+git status
+
+Step 4: Commit on GitWork
+------------------------------
+git add hello.xml
+git commit -m "Add hello.xml with updated content on GitWork"
+
+Step 5: Switch to master
+-----------------------------
+git checkout master
+git branch
+
+Step 6: Add hello.xml to master with different content
+-------------------------------------------------------------
+'<message>Hello from master branch - different content</message>' | Out-File hello.xml
+cat hello.xml
+
+Step 7: Commit on master
+-----------------------------
+git add hello.xml
+git commit -m "Add hello.xml with different content on master"
+
+Step 8: Observe divergent log across branches
+---------------------------------------------------
+git log --oneline --graph --decorate --all
+
+Step 9: Check differences
+------------------------------
+git diff master GitWork
+
+Step 10: Visual comparison (VS Code, in place of P4Merge)
+----------------------------------------------------------------
+git diff master GitWork > conflict_diff.txt
+code conflict_diff.txt
+
+Step 11: Merge GitWork into master (triggers conflict)
+-------------------------------------------------------------
+git merge GitWork
+
+Step 12: Observe conflict status
+-------------------------------------
+git status
+cat hello.xml
+
+Step 13: Resolve the conflict manually
+-------------------------------------------
+notepad hello.xml
+(edited content to merge both branches' intent)
+
+Step 14: Verify, stage, and commit resolution
+---------------------------------------------------
+cat hello.xml
+git add hello.xml
+git commit -m "Resolve merge conflict in hello.xml between master and GitWork"
+
+Step 15: Check status / backup files
+------------------------------------------
+git status
+ls -force
+
+Step 16: Update .gitignore for merge backup files
+-------------------------------------------------------
+notepad .gitignore
+(added line: *.orig)
+git add .gitignore
+git commit -m "Add *.orig backup files to .gitignore"
+
+Step 17: List branches
+---------------------------
+git branch -a
+
+Step 18: Delete merged branch
+----------------------------------
+git branch -d GitWork
+git branch -a
+
+Step 19: Final log
+-----------------------
+git log --oneline --graph --decorate
+
+Step 20: Push to GitHub
+----------------------------
+git push
